@@ -22,7 +22,7 @@
             gap: .5vw;
 
             &-toggle {
-                font-size: 3vw;
+                font-size: 1.3em;
                 cursor: pointer;
                 justify-self: flex-end;
                 padding: .5em;
@@ -93,6 +93,7 @@
         position: fixed;
         left: 0;
         bottom: 0;
+        z-index: 1;
 
         &-button {
             padding: 1em;

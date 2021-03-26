@@ -43,13 +43,14 @@ $bubbleCount: 6;
     }
 
     &-form {
-        background-color: var(--major-color);
+        background-color: transparent;
         width: calc(100% - 4em);
         height: calc(100% - 4em);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        z-index: 1;
 
         &-title {
             line-height: 3em;
@@ -156,6 +157,7 @@ $bubbleCount: 6;
 
         &-form {
             justify-self: left;
+            background-color: var(--major-color);
 
             &-title {
                 line-height: 3em;
