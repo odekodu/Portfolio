@@ -1,1 +1,19 @@
-<p>skills works!</p>
+<div class="skills">
+    <div class="skills-set">
+        <span *ngFor="let skill of skills" class="skills-set-item">{{skill.toUpperCase()}}</span>
+    </div>
+    <div class="skills-works">
+        <div *ngFor="let work of works" class="skills-works-item">
+            <span class="skills-works-item-job">{{work.job}}</span>
+            <span class="skills-works-item-company">{{work.company}}</span>
+            <span class="skills-works-item-date">{{work.date | date}}</span>
+            <span class="skills-works-item-location">{{work.location}}</span>
+            <span class="skills-works-item-details">
+                <span class="skills-works-item-details-item" *ngFor="let detail of work.details">
+                    <i class="fa fa-star"></i>
+                    <span>{{detail}}</span>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,116 @@
+.projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr;
+    justify-items: center;
+    padding: 1em;
+
+    &-header {
+        display: grid;
+        gap: 1vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, max-content);
+
+        &-title {
+            text-transform: uppercase;
+            font-size: 2em;
+            text-align: center;
+            color: var(--extra-color);
+            letter-spacing: 0.05em;
+        }
+
+        &-tools {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            width: 80%;
+            box-shadow: 1px 1px 5px 1px var(--extra-color);
+            justify-self: center;
+
+            &-item {
+                margin: 1vh 1vw;
+                cursor: pointer;
+                background-color: transparent;
+                border: none;
+                outline: none;
+                color: var(--minor-color);
+                transition: 1s;
+
+                &:disabled,
+                &:hover {
+                    color: var(--extra-color);
+                    animation: fade 5s linear infinite;
+                }
+            }
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1vh 1vw;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: -webkit-fill-available;
+        padding: 1em;
+
+        &-item {
+            width: 100%;
+            height: 300px;
+            border: 1px solid var(--minor-color);
+            position: relative;
+
+            &:hover {
+                border-color: var(--extra-color);
+                animation: bounce 1s linear;
+
+                .projects-list-item-name {
+                    background-color: var(--extra-color);
+                    color: var(--major-color);
+                }
+            }
+
+            &-name {
+                padding: 1vh 1vw;
+                text-transform: uppercase;
+                transform: rotateX(10deg);
+                position: absolute;
+                top: 0;
+                right: 0;
+                background-color: var(--minor-color);
+                color: var(--major-color);
+                z-index: 1;
+            }
+
+            &-image{
+                position: absolute;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media (min-width: 700px) {
+    .projects {
+        &-header {
+            &-title {
+            }
+
+            &-tools {
+                &-item {
+                }
+            }
+        }
+
+        &-list {
+            grid-template-columns: 1fr 1fr;
+            gap: 2vh 2vw;
+            width: 80%;
+
+            &-item {
+            }
+        }
+    }
+}

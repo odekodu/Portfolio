@@ -1,1 +1,35 @@
-<p>contact works!</p>
+<div class="contact">
+    <div class="contact-background">
+        <span class="contact-background-section">
+            <span class="contact-background-section-key" *ngFor="let bubble of bubbles">
+            </span>
+        </span>
+
+        <span class="contact-background-section">
+            <span class="contact-background-section-key" *ngFor="let bubble of bubbles">
+            </span>
+        </span>
+    </div>
+    <form (submit)="onSubmit()" class="contact-form" [formGroup]="contactForm">
+        <span class="contact-form-title">Contact Me</span>
+        <div class="contact-form-data">
+            <span class="contact-form-data-item">
+                <label class="contact-form-data-item-label">Name</label>
+                <input type="text" class="contact-form-data-item-input" formControlName="name" required>
+            </span>
+
+            <span class="contact-form-data-item">
+                <label class="contact-form-data-item-label">Email</label>
+                <input type="email" class="contact-form-data-item-input" formControlName="email" ngModel email required>
+            </span>
+
+            <span class="contact-form-data-item">
+                <label class="contact-form-data-item-label">Message</label>
+                <textarea class="contact-form-data-item-input" formControlName="message" required
+                    minlength="4"></textarea>
+            </span>
+        </div>
+        <button class="contact-form-sumbit" [disabled]="contactForm.invalid">Send</button>
+        <span class="contact-form-status">{{status}}</span>
+    </form>
+</div>

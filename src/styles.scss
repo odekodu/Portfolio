@@ -1,22 +1,90 @@
 /* You can add global styles to this file, and also import other style files */
-:root{
-    --major-color: rgb(12, 12, 14);
-    --minor-color: rgb(235, 239, 255);
-    --extra-color: rgb(166, 255, 0);
+:root {
+    --text-font: "Oswald", monospace;
+    --title-font: "Cormorant Unicase", serif;
 
-    --text-font: 'Oswald', monospace;
-    --title-font: 'Cormorant Unicase', serif;
+    --major-color: rgb(235, 239, 255);
+    --minor-color: rgb(12, 12, 14);
+    --extra-color: rgb(124, 46, 46);
+    --minor-extra-color: rgba(59, 44, 44);
 }
 
-*{
+[data-theme="light"] {
+    --major-color: rgb(12, 12, 14);
+    --minor-color: rgb(235, 239, 255);
+    --minor-extra-color: rgb(119, 93, 93);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--minor-color);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--extra-color);
+    transition-duration: 0.5s;
+}
+
+* {
     margin: 0px;
     padding: 0px;
     font-family: var(--text-font);
 }
 
-body{
+body {
     height: 100vh;
     width: 100%;
     background-color: var(--major-color);
     color: var(--minor-color);
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.1;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-7px);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    55% {
+        transform: translateY(0px);
+    }
+    70% {
+        transform: translateY(-3px);
+    }
+    75% {
+        transform: translateY(0px);
+    }
+    80% {
+        transform: translateY(-2px);
+    }
+    85% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@media(min-width: 700px){
+    ::-webkit-scrollbar {
+        width: 20px;
+        height: 5px;
+    }
 }

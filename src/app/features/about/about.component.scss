@@ -1,0 +1,169 @@
+@import "../../../../node_modules/mathsass/dist/math";
+
+$stack: 5;
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1vw;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &-qoute {
+        display: block;
+        font-size: 1.5em;
+        margin: auto 0em;
+        padding: 0em 2em;
+        letter-spacing: 0.09em;
+        font-weight: bold;
+
+        span {
+            color: var(--extra-color);
+            font-family: var(--title-font);
+        }
+    }
+
+    &-stage {
+        position: absolute;
+        opacity: .2;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+}
+
+.sphere {
+    width: 400px;
+    height: 400px;
+    perspective-origin: 50%;
+    perspective: 120%;
+    justify-self: center;
+    align-self: center;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: spin 10s linear infinite;
+
+    .face {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(
+            circle at 50% 50%,
+            rgba(179, 255, 0, 0.1) 20%,
+            rgba(255, 255, 255, 0.1) 50%,
+            rgba(179, 255, 0, 0.1) 98%
+        );
+        color: transparent;
+        animation: glitter 10s linear infinite;
+    }
+
+    .face.yaxis {
+        border: 1px solid rgba(179, 255, 0, 0.1);
+    }
+
+    .face.xaxis {
+        border: 1px solid rgba(179, 255, 0, 0.1);
+    }
+
+    .face:nth-of-type(1) {
+        transform: rotateX(36deg);
+    }
+    .face:nth-of-type(2) {
+        transform: rotateX(72deg);
+    }
+    .face:nth-of-type(3) {
+        transform: rotateX(108deg);
+    }
+    .face:nth-of-type(4) {
+        transform: rotateX(140deg);
+    }
+    .face:nth-of-type(5) {
+        transform: rotateX(176deg);
+    }
+
+    .face:nth-of-type(6) {
+        transform: rotateY(36deg);
+    }
+    .face:nth-of-type(7) {
+        transform: rotateY(72deg);
+    }
+    .face:nth-of-type(8) {
+        transform: rotateY(108deg);
+    }
+    .face:nth-of-type(9) {
+        transform: rotateY(140deg);
+    }
+    .face:nth-of-type(10) {
+        transform: rotateY(176deg);
+    }
+
+    .face:nth-of-type(11) {
+        transform: rotateZ(36deg);
+    }
+    .face:nth-of-type(12) {
+        transform: rotateZ(72deg);
+    }
+    .face:nth-of-type(13) {
+        transform: rotateZ(108deg);
+    }
+    .face:nth-of-type(14) {
+        transform: rotateZ(140deg);
+    }
+    .face:nth-of-type(15) {
+        transform: rotateZ(176deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotateZ(25deg) rotateX(20deg) rotateY(0deg);
+    }
+    50% {
+        transform: rotateZ(-25deg) rotateX(-20deg) rotateY(180deg);
+    }
+    100% {
+        transform: rotateZ(25deg) rotateX(20deg) rotateY(360deg);
+    }
+}
+
+@keyframes glitter {
+    0% {
+        opacity: 0.1;
+        filter: hue-rotate(0deg);
+        box-shadow: 1px 1px 20px 5px var(--extra-color);
+    }
+    50% {
+        opacity: 1;
+        filter: hue-rotate(360deg);
+        box-shadow: 1px 1px 20px 5px var(--minor-color);
+    }
+    100% {
+        opacity: 0.1;
+        filter: hue-rotate(0deg);
+        box-shadow: 1px 1px 20px 5px var(--extra-color);
+    }
+}
+
+@media (min-width: 700px) {
+    .about {
+        grid-template-columns: 1fr 1fr;
+        overflow: hidden;
+
+        &-qoute {
+            font-size: 1.8em;
+            padding: 0em 2em;
+            font-weight: bold;
+        }
+
+        &-stage {
+            position: relative;
+        }
+    }
+}

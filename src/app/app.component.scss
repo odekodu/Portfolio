@@ -1,31 +1,61 @@
 .home {
-    display: flex;
+    display: grid;
+    align-content: flex-start;
+    grid-template-rows: max-content 1fr;
     height: 100%;
     align-items: center;
-    justify-content: center;
     position: relative;
+    overflow: hidden;
+
+    &-header {
+        display: grid;
+        grid-template-columns: max-content max-content;
+        align-items: center;
+        justify-content: flex-end;
+
+        gap: 1em;
+
+        &-theme {
+            display: grid;
+            grid-template-columns: max-content max-content;
+            align-items: center;
+            gap: .5vw;
+
+            &-toggle {
+                font-size: 3vw;
+                cursor: pointer;
+                justify-self: flex-end;
+                padding: .5em;
+
+                &:hover {
+                    color: var(--extra-color);
+                }
+            }
+        }
+    }
 
     &-menu {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: grid;
+        grid-template-rows: max-content 1fr;
+        grid-template-columns: 1fr;
+        justify-items: center;
         background-color: var(--major-color);
         position: absolute;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
+        z-index: 100;
 
-        &-toggle{
-            position: absolute;
-            top: 1%;
-            right: 1%;
+        &-toggle {
             font-size: 3vw;
             cursor: pointer;
-        }
+            justify-self: flex-end;
+            padding: .5em;
 
-        &-toggle:hover{
-            color: var(--extra-color);
+            &:hover {
+                color: var(--extra-color);
+            }
         }
 
         &-list {
@@ -46,23 +76,25 @@
                 font-weight: 700;
                 font-family: var(--title-font);
                 cursor: pointer;
+                border: none;
+                outline: none;
             }
 
-            &-button:hover{
+            &-button:hover {
                 color: var(--extra-color);
             }
         }
     }
 
-    &-social{
+    &-social {
         display: flex;
         flex-direction: column;
         align-self: center;
-        position: absolute;
+        position: fixed;
         left: 0;
         bottom: 0;
 
-        &-button{
+        &-button {
             padding: 1em;
             font-size: 1.2em;
             background-color: var(--minor-color);
@@ -70,10 +102,18 @@
             display: flex;
             align-items: center;
             cursor: pointer;
+            text-decoration: none;
         }
 
-        &-button:hover{
+        &-button:hover {
             background-color: var(--extra-color);
+            color: var(--minor-color);
         }
+    }
+
+    &-wrapper {
+        width: 100%;
+        height: 100%;
+        overflow: auto;
     }
 }

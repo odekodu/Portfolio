@@ -1,5 +1,11 @@
 <div class="home">
-  <i class="fa fa-bars home-menu-toggle" (click)="showMenu = true"></i>
+  <span class="home-header">
+    <span class="home-header-theme">
+      <span class="home-header-theme-text">{{!theme ? "Dark" : "Light"}}</span>
+      <i class="fa home-header-theme-toggle" [class.fa-toggle-on]="!theme" [class.fa-toggle-off]="theme" (click)="showMenu = false" (click)="theme = !theme"></i>
+    </span>
+    <i class="fa fa-bars home-header-theme-toggle" (click)="showMenu = true"></i>
+  </span>
 
   <div *ngIf="showMenu" class="home-menu" @fade>
     <i class="fa fa-times home-menu-toggle" (click)="showMenu = false"></i>
@@ -7,7 +13,7 @@
     <span class="home-menu-list">
       <span routerLink="about" class="home-menu-list-button" (click)="showMenu = false">About</span>
       <span routerLink="projects" class="home-menu-list-button" (click)="showMenu = false">Projects</span>
-      <span routerLink="skills" class="home-menu-list-button" (click)="showMenu = false">Skills</span>
+      <span routerLink="skills" class="home-menu-list-button" (click)="showMenu = false">Skills & Experience</span>
       <span routerLink="contact" class="home-menu-list-button" (click)="showMenu = false">Contact</span>
     </span>
   </div>
