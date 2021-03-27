@@ -25,8 +25,8 @@ enum ProjectType {
 interface Project {
   name: string;
   type: ProjectType;
-  app: string;
-  git: string;
+  app?: string;
+  git: { api?: string, app?: string };
   description: string;
   tools: string[];
   date: Date;
@@ -46,8 +46,8 @@ export class ProjectsComponent implements OnInit {
       type: ProjectType.APP,
       image: './../../../assets/tabulator.png?rr',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.NEST_JS, ProjectTools.NGRX, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
-      git: '',
-      app: '',
+      git: { api: 'https://github.com/Kade-95/tabulator-api', app: 'https://github.com/Kade-95/tabulator-app' },
+      app: 'https://tabulator-app.herokuapp.com',
       date: new Date(),
       description: 'Tabulator is a trial MongoDB Emulator, designed specifically for non-devs to have a taste of what MongoDB is.',
       status: true
@@ -57,8 +57,8 @@ export class ProjectsComponent implements OnInit {
       type: ProjectType.APP,
       image: '',
       tools: [ProjectTools.JSDOM, ProjectTools.CSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.EXPRESS, ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
-      git: '',
-      app: '',
+      git: { app: 'https://github.com/Kade-95/transactor' },
+      app: 'https://sample-bank.herokuapp.com',
       date: new Date(),
       description: 'A simple application that illustrates how the banking system works', status: true
     },
@@ -67,19 +67,18 @@ export class ProjectsComponent implements OnInit {
       type: ProjectType.APP,
       image: './../../../assets/transverser.png',
       tools: [ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
-      git: '',
-      app: '',
+      git: {},
       date: new Date(),
       description: 'A tree data-structure that children(branches) can trace back to the parents(root) and vise verser',
       status: true
     },
     {
-      name: 'Deo',
+      name: 'Tailored',
       type: ProjectType.APP,
       image: '',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.NEST_JS, ProjectTools.NGRX, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
-      git: '',
-      app: '',
+      git: { api: 'https://github.com/Kade-95/tailor-server', app: 'https://github.com/Kade-95/tailored-app' },
+      app: 'https://tailored-app.herokuapp.com',
       date: new Date(),
       description: 'A platform for tailors to showcase their ready-made designs for customers to purchase',
       status: true
@@ -89,8 +88,8 @@ export class ProjectsComponent implements OnInit {
       type: ProjectType.APP,
       image: '',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
-      git: '',
-      app: '',
+      git: { app: 'https://github.com/Kade-95/Portfolio' },
+      app: location.origin,
       date: new Date(),
       description: 'Well "this" is my Portfolior',
       status: false
@@ -100,8 +99,7 @@ export class ProjectsComponent implements OnInit {
       type: ProjectType.APP,
       image: './../../../assets/promixedDB.png',
       tools: [ProjectTools.INDEXED_DB, ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
-      git: '',
-      app: '',
+      git: {},
       date: new Date(),
       description: 'A promisified version of IndexedDB',
       status: false
@@ -111,8 +109,7 @@ export class ProjectsComponent implements OnInit {
       type: ProjectType.APP,
       image: '',
       tools: [ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
-      git: '',
-      app: '',
+      git: {},
       date: new Date(),
       description: 'A simple JSON database',
       status: false
@@ -125,6 +122,12 @@ export class ProjectsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleTool(tool: string) {
+    this.currentTool = this.currentTool == tool ? 'all' : tool;
+    console.log(this.currentTool, tool);
+    
   }
 
   showProject(project: Project) {
