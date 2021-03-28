@@ -111,6 +111,7 @@
                     display: flex;
                     justify-content: left;
                     align-items: center;
+                    flex-wrap: wrap;
 
                     &-item {
                         display: flex;
@@ -131,6 +132,7 @@
                     display: flex;
                     justify-content: space-around;
                     align-items: center;
+                    flex-wrap: wrap;
 
                     &-item {
                         display: flex;
