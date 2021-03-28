@@ -19,7 +19,7 @@ $skills: 12;
         align-items: center;
         justify-content: center;
         animation: 60s rotate linear infinite;
-        height: 100vh;
+        height: 80vh;
 
         &-item {
             position: absolute;
@@ -45,7 +45,7 @@ $skills: 12;
     &-works {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, max-content);
         height: calc(100% - 2em);
         padding: 1em;
         gap: 1em;
@@ -56,7 +56,7 @@ $skills: 12;
             gap: 1em;
             position: relative;
             background-color: rgba(59, 44, 44, 0.5);
-            padding: 0em 1em;
+            padding: 1em;
             align-content: flex-start;
 
             &-company {
@@ -67,6 +67,7 @@ $skills: 12;
                 align-items: center;
                 grid-area: company;
                 margin: 0em -1em;
+                margin-top: -1em;
                 letter-spacing: 0.05em;
             }
 
@@ -92,6 +93,7 @@ $skills: 12;
                 align-content: flex-start;
                 gap: .5em;
                 background-color: rgba(59, 44, 44, 0.5);
+                padding: .3em;
                 
                 &-item{
                     grid-template-columns: max-content 1fr;

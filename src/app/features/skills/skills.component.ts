@@ -21,11 +21,12 @@ export class SkillsComponent implements OnInit {
     "indexeddb",
   ];
 
-  works: { company: string, location: string, date: Date, job: string, details: string[] }[] = [
+  works: { company: string, location: string, from: Date, to: Date | string, job: string, details: string[] }[] = [
     {
       company: 'IPISolutions NIG. LTD.',
       location: 'No. 9 Adebola Str Surulere, Lagos State, Nigeria',
-      date: new Date(),
+      from: new Date('2019/08/09'),
+      to: new Date(),
       job: 'FullStack & Lead Developer',
       details: [
         "Created the framework for Crater365 page builder",
@@ -34,9 +35,20 @@ export class SkillsComponent implements OnInit {
       ]
     },
     {
+      company: 'Kliiq',
+      location: 'Remote',
+      from: new Date('2020/12/19'),
+      to: new Date(),
+      job: 'Backend Engineer',
+      details: [
+        "Built Accademia Service which is a distributed micro-service on a VPC",
+      ]
+    },
+    {
       company: 'Galaxy Backbone PLC.',
       location: 'Central Area, Abuja',
-      date: new Date(),
+      from: new Date('2015/02/07'),
+      to: new Date('2015/08/02'),
       job: 'Technical Support Staff',
       details: [
         "Six months internship",
