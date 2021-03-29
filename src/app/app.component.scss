@@ -19,13 +19,13 @@
             display: grid;
             grid-template-columns: max-content max-content;
             align-items: center;
-            gap: .5vw;
+            gap: 0.5vw;
 
             &-toggle {
                 font-size: 1.3em;
                 cursor: pointer;
                 justify-self: flex-end;
-                padding: .5em;
+                padding: 0.5em;
 
                 &:hover {
                     color: var(--extra-color);
@@ -51,7 +51,7 @@
             font-size: 3vw;
             cursor: pointer;
             justify-self: flex-end;
-            padding: .5em;
+            padding: 0.5em;
 
             &:hover {
                 color: var(--extra-color);
@@ -71,7 +71,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-size: 3vw;
+                font-size: 2em;
                 text-transform: capitalize;
                 font-weight: 700;
                 font-family: var(--title-font);
@@ -88,15 +88,14 @@
 
     &-social {
         display: flex;
-        flex-direction: column;
         align-self: center;
         position: fixed;
         left: 0;
-        bottom: 0;
+        top: 0;
         z-index: 1;
 
         &-button {
-            padding: 1em;
+            padding: 0.5em;
             font-size: 1.2em;
             background-color: var(--minor-color);
             color: var(--major-color);
@@ -116,5 +115,50 @@
         width: 100%;
         height: 100%;
         overflow: auto;
+    }
+}
+
+@media (min-width: 700px) {
+    .home {
+        &-header {
+            &-theme {
+                &-toggle {
+                    &:hover {
+                    }
+                }
+            }
+        }
+
+        &-menu {
+            &-toggle {
+                &:hover {
+                }
+            }
+
+            &-list {
+                &-button {
+                }
+
+                &-button:hover {
+                }
+            }
+        }
+
+        &-social {
+            flex-direction: column;
+            left: 0;
+            bottom: 0;
+            top: unset;
+
+            &-button {
+                padding: 0.5em;
+            }
+
+            &-button:hover {
+            }
+        }
+
+        &-wrapper {
+        }
     }
 }

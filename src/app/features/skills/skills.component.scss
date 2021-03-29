@@ -9,35 +9,38 @@ $skills: 12;
     width: 100%;
     height: 100%;
 
-    &-set {
-        perspective-origin: center;
-        perspective: 1200px;
-        transform-style: preserve-3d;
-        position: relative;
-        padding: 1em 2em;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        animation: 60s rotate linear infinite;
-        height: 100vh;
+    &-view {
+        display: grid;
+        grid-template-rows: max-content 1fr;
+        gap: 1em;
+        padding: 1em;
+        height: 80vh;
 
-        &-item {
-            position: absolute;
-            width: 50%;
-            max-width: 500px;
-            display: flex;
-            padding: 1em;
-            justify-content: center;
-            height: 30vh;
-            background: rgba(59, 44, 44, .1);
-            font-size: 4vh;
-            letter-spacing: 0.05em;
+        &-title {
         }
 
-        &:hover {
-            .skills-set-item {
+        &-set {
+            perspective-origin: center;
+            perspective: 1200px;
+            transform-style: preserve-3d;
+            position: relative;
+            padding: 1em 2em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: 60s rotate linear infinite;
+
+            &-item {
+                position: absolute;
+                width: 50%;
+                max-width: 500px;
+                display: flex;
+                padding: 1em;
+                justify-content: center;
+                height: 30vh;
                 background: rgba(59, 44, 44, 0.5);
-                color: var(--major-color);
+                font-size: 4vh;
+                letter-spacing: 0.05em;
             }
         }
     }
@@ -45,7 +48,7 @@ $skills: 12;
     &-works {
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: repeat(3, max-content);
         height: calc(100% - 2em);
         padding: 1em;
         gap: 1em;
@@ -56,7 +59,7 @@ $skills: 12;
             gap: 1em;
             position: relative;
             background-color: rgba(59, 44, 44, 0.5);
-            padding: 0em 1em;
+            padding: 1em;
             align-content: flex-start;
 
             &-company {
@@ -67,6 +70,7 @@ $skills: 12;
                 align-items: center;
                 grid-area: company;
                 margin: 0em -1em;
+                margin-top: -1em;
                 letter-spacing: 0.05em;
             }
 
@@ -90,15 +94,16 @@ $skills: 12;
                 grid-area: details;
                 display: grid;
                 align-content: flex-start;
-                gap: .5em;
+                gap: 0.5em;
                 background-color: rgba(59, 44, 44, 0.5);
-                
-                &-item{
+                padding: 0.3em;
+
+                &-item {
                     grid-template-columns: max-content 1fr;
                     display: grid;
                     letter-spacing: 0.1em;
                     gap: 1vw;
-                    padding: .5em;
+                    padding: 0.5em;
                 }
             }
         }
@@ -106,7 +111,7 @@ $skills: 12;
 }
 
 @for $i from 1 through $skills {
-    .skills-set-item:nth-of-type(#{$i}) {
+    .skills-view-set-item:nth-of-type(#{$i}) {
         transform: rotateX(#{360 * $i/$skills}deg);
     }
 }
@@ -129,10 +134,20 @@ $skills: 12;
         grid-template-columns: repeat(2, 1fr);
         overflow: hidden;
 
-        &-set {
+        &-view {
             height: calc(100% - 3em);
 
-            &-item {
+            &-set {
+                &:hover {
+                    .skills-view-set-item {
+                        background: rgba(59, 44, 44, 0.5);
+                        color: var(--major-color);
+                    }
+                }
+
+                &-item {
+                    background: rgba(59, 44, 44, 0.1);
+                }
             }
         }
     }

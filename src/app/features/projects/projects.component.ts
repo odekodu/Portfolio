@@ -44,7 +44,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Tabulator',
       type: ProjectType.APP,
-      image: './../../../assets/tabulator.png?rr',
+      image: './../../../assets/tabulator.png',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.NEST_JS, ProjectTools.NGRX, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
       git: { api: 'https://github.com/Kade-95/tabulator-api', app: 'https://github.com/Kade-95/tabulator-app' },
       app: 'https://tabulator-app.herokuapp.com',
@@ -55,7 +55,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Transactor',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/transactor.png',
       tools: [ProjectTools.JSDOM, ProjectTools.CSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.EXPRESS, ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
       git: { app: 'https://github.com/Kade-95/transactor' },
       app: 'https://sample-bank.herokuapp.com',
@@ -75,7 +75,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Tailored',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/tailored.png',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.NEST_JS, ProjectTools.NGRX, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
       git: { api: 'https://github.com/Kade-95/tailor-server', app: 'https://github.com/Kade-95/tailored-app' },
       app: 'https://tailored-app.herokuapp.com',
@@ -86,12 +86,12 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Portfolio',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/portfolio.png',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
       git: { app: 'https://github.com/Kade-95/Portfolio' },
       app: location.origin,
       date: new Date(),
-      description: 'Well "this" is my Portfolior',
+      description: 'Well "this" is my Portfolio',
       status: false
     },
     {
@@ -107,7 +107,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Nulli',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/nulli.png',
       tools: [ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
       git: {},
       date: new Date(),
