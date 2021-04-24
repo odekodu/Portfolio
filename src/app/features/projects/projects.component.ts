@@ -44,7 +44,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Tabulator',
       type: ProjectType.APP,
-      image: './../../../assets/tabulator.png?rr',
+      image: './../../../assets/tabulator.png',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.NEST_JS, ProjectTools.NGRX, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
       git: { api: 'https://github.com/Kade-95/tabulator-api', app: 'https://github.com/Kade-95/tabulator-app' },
       app: 'https://tabulator-app.herokuapp.com',
@@ -91,7 +91,7 @@ export class ProjectsComponent implements OnInit {
       git: { app: 'https://github.com/Kade-95/Portfolio' },
       app: location.origin,
       date: new Date(),
-      description: 'Well "this" is my Portfolior',
+      description: 'Well "this" is my Portfolio',
       status: false
     },
     {

@@ -10,7 +10,7 @@ declare let Email: any;
 export class ContactComponent implements OnInit {
 
   contactForm!: FormGroup;
-  status = "...";
+  status = "";
   bubbles: string[] = [];
 
   constructor(

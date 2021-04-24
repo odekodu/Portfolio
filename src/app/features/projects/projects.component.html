@@ -1,12 +1,12 @@
 <div class="projects">
     <div class="projects-header">
-        <h3 class="projects-header-title">Featured Projects</h3>
-
         <div class="projects-header-tools">
             <button class="projects-header-tools-item" *ngFor="let tool of tools" (click)="toggleTool(tool)"
                 [disabled]="currentTool == tool">{{tool.toUpperCase()}}</button>
         </div>
     </div>
+
+    <h3 class="projects-header-title">Featured Projects</h3>
 
     <div class="projects-list">
         <span class="projects-list-item" *ngFor="let project of projects" [style.display]="showProject(project)">
