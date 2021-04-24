@@ -1,8 +1,13 @@
 <div class="home">
   <span class="home-header">
+    <span class="home-header-nav">
+      <i class="fa fa-angle-left home-header-nav-icon" [routerLink]="prevTitle.toLowerCase()" [title]="prevTitle"></i>
+      <i class="fa fa-angle-right home-header-nav-icon" [routerLink]="nextTitle.toLowerCase()" [title]="nextTitle"></i>
+    </span>
     <span class="home-header-theme">
       <span class="home-header-theme-text">{{!theme ? "Dark" : "Light"}}</span>
-      <i class="fa home-header-theme-toggle" [class.fa-toggle-on]="!theme" [class.fa-toggle-off]="theme" (click)="showMenu = false" (click)="theme = !theme"></i>
+      <i class="fa home-header-theme-toggle" [class.fa-toggle-on]="!theme" [class.fa-toggle-off]="theme"
+        (click)="theme = !theme"></i>
     </span>
     <i class="fa fa-bars home-header-theme-toggle" (click)="showMenu = true"></i>
   </span>
@@ -11,10 +16,7 @@
     <i class="fa fa-times home-menu-toggle" (click)="showMenu = false"></i>
 
     <span class="home-menu-list">
-      <span routerLink="about" class="home-menu-list-button" (click)="showMenu = false">About</span>
-      <span routerLink="projects" class="home-menu-list-button" (click)="showMenu = false">Projects</span>
-      <span routerLink="skills" class="home-menu-list-button" (click)="showMenu = false">Skills & Experience</span>
-      <span routerLink="contact" class="home-menu-list-button" (click)="showMenu = false">Contact</span>
+      <span *ngFor="let link of menuLinks" [routerLink]="link.toLowerCase()" class="home-menu-list-button" (click)="showMenu = false">{{link}}</span>
     </span>
   </div>
 

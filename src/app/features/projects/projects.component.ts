@@ -26,7 +26,7 @@ interface Project {
   name: string;
   type: ProjectType;
   app?: string;
-  git: { api?: string, app?: string };
+  git: { api?: string, app?: string, code?: string };
   description: string;
   tools: string[];
   date: Date;
@@ -55,7 +55,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Transactor',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/transactor.png',
       tools: [ProjectTools.JSDOM, ProjectTools.CSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.EXPRESS, ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
       git: { app: 'https://github.com/Kade-95/transactor' },
       app: 'https://sample-bank.herokuapp.com',
@@ -75,7 +75,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Tailored',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/tailored.png',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.MONGO_DB, ProjectTools.NEST_JS, ProjectTools.NGRX, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
       git: { api: 'https://github.com/Kade-95/tailor-server', app: 'https://github.com/Kade-95/tailored-app' },
       app: 'https://tailored-app.herokuapp.com',
@@ -86,7 +86,7 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Portfolio',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/portfolio.png',
       tools: [ProjectTools.ANGULAR, ProjectTools.SCSS, ProjectTools.HTML, ProjectTools.NODE_JS, ProjectTools.TYPESCRIPT],
       git: { app: 'https://github.com/Kade-95/Portfolio' },
       app: location.origin,
@@ -99,7 +99,7 @@ export class ProjectsComponent implements OnInit {
       type: ProjectType.APP,
       image: './../../../assets/promixedDB.png',
       tools: [ProjectTools.INDEXED_DB, ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
-      git: {},
+      git: { code: "https://github.com/Kade-95/PromixedDB.git" },
       date: new Date(),
       description: 'A promisified version of IndexedDB',
       status: false
@@ -107,9 +107,9 @@ export class ProjectsComponent implements OnInit {
     {
       name: 'Nulli',
       type: ProjectType.APP,
-      image: '',
+      image: './../../../assets/nulli.png',
       tools: [ProjectTools.NODE_JS, ProjectTools.JAVASCRIPT],
-      git: {},
+      git: {code: "https://github.com/Kade-95/Nulli.git"},
       date: new Date(),
       description: 'A simple JSON database',
       status: false
@@ -127,7 +127,7 @@ export class ProjectsComponent implements OnInit {
   toggleTool(tool: string) {
     this.currentTool = this.currentTool == tool ? 'all' : tool;
     console.log(this.currentTool, tool);
-    
+
   }
 
   showProject(project: Project) {

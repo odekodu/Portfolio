@@ -9,10 +9,9 @@
 
     &-header {
         display: grid;
-        grid-template-columns: max-content max-content;
+        grid-template-columns: repeat(3, max-content);
         align-items: center;
         justify-content: flex-end;
-
         gap: 1em;
 
         &-theme {
@@ -22,10 +21,27 @@
             gap: 0.5vw;
 
             &-toggle {
-                font-size: 1.3em;
+                font-size: 2em;
                 cursor: pointer;
                 justify-self: flex-end;
                 padding: 0.5em;
+
+                &:hover {
+                    color: var(--extra-color);
+                }
+            }
+        }
+
+        &-nav{
+            justify-self: flex-start;
+            display: grid;
+            grid-template-columns:  max-content max-content;
+            gap: 1em;
+
+            &-icon{
+                font-size: 3em;
+                cursor: pointer;
+                justify-self: flex-end;
 
                 &:hover {
                     color: var(--extra-color);
@@ -48,7 +64,7 @@
         z-index: 100;
 
         &-toggle {
-            font-size: 3vw;
+            font-size: 2em;
             cursor: pointer;
             justify-self: flex-end;
             padding: 0.5em;

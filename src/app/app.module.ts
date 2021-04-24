@@ -8,7 +8,6 @@ import { AboutComponent } from './features/about/about.component';
 import { ProjectsComponent } from './features/projects/projects.component';
 import { SkillsComponent } from './features/skills/skills.component';
 import { ContactComponent } from './features/contact/contact.component';
-import { NotFoundComponent } from './features/not-found/not-found.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProjectsComponent,
     SkillsComponent,
     ContactComponent,
-    NotFoundComponent
   ],
   imports: [
     BrowserModule,
