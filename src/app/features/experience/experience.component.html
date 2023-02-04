@@ -1,0 +1,31 @@
+<div class="experience">
+    <span class="experience-title">Official Experiences</span>
+
+    <div class="experience-list">
+        <div *ngFor="let experience of experiences" class="experience-item">
+            <span class="experience-item-job">{{experience.job}}</span>
+            <span class="experience-item-description">
+                <span class="experience-item-description-split">
+                    <span class="experience-item-description-detail">
+                        <span class="material-symbols-outlined">apartment</span>
+                        {{experience.company}}
+                    </span>
+                    <span class="experience-item-description-detail">
+                        <span class="material-symbols-outlined">pin_drop</span>
+                        {{experience.location}}
+                    </span>
+                    <span class="experience-item-description-detail">
+                        <span class="material-symbols-outlined">event</span>
+                        {{experience.from | date}} - {{experience.to ? (experience.to | date) : 'Now'}}
+                    </span>
+                </span>
+                <details class="experience-item-details">
+                    <span class="experience-item-details-item" *ngFor="let detail of experience.details">
+                        <span class="material-symbols-outlined">star</span>
+                        <span>{{detail}}</span>
+                    </span>
+                </details>
+            </span>
+        </div>
+    </div>
+</div>

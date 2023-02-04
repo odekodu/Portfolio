@@ -12,23 +12,55 @@ $stack: 5;
     overflow: hidden;
     position: relative;
 
-    &-qoute {
-        display: block;
-        font-size: 1.5em;
-        margin: auto 0em;
-        padding: 0em 2em;
-        letter-spacing: 0.09em;
-        font-weight: bold;
+    &-greeting {
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        gap: 3rem;
+        padding: 1em 2em;
 
-        span {
+        &-salute{
+            font-size: 2.5rem;
+            letter-spacing: 0.1em;
+        }
+
+        &-statement{
+            letter-spacing: 0.06em;
+            font-size: 1.5rem;
+        }
+
+        b {
             color: var(--extra-color);
             font-family: var(--title-font);
         }
     }
 
+    &-links{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        a {
+            border: none;
+            border-radius: 5px;
+            background-color: var(--minor-color);
+            color: var(--major-color);
+            padding: .7rem;
+            cursor: pointer;
+            letter-spacing: .05rem;
+            font-size: 1rem;
+            text-decoration: none;
+            text-align: center;
+
+            &:hover{
+                color: var(--extra-color);
+            }
+        }
+    }
+
     &-stage {
         position: absolute;
-        opacity: .2;
+        opacity: .1;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -157,15 +189,32 @@ $stack: 5;
         grid-template-columns: 1fr 1fr;
         overflow: hidden;
 
-        &-qoute {
-            font-size: 1.8em;
-            padding: 0em 2em;
-            font-weight: bold;
+        &-greeting {
+    
+            &-salute{
+                font-size: 3rem;
+                letter-spacing: 0.1em;
+            }
+    
+            &-statement{
+                letter-spacing: 0.09em;
+                font-size: 2rem;
+            }
+        }
+    
+        &-links{
+            display: flex;
+
+            a {
+                padding: 1rem;
+                letter-spacing: .07rem;
+                font-size: 1.5rem;
+            }
         }
 
         &-stage {
             position: relative;
-            opacity: 1;
+            opacity: .5;
         }
     }
 }

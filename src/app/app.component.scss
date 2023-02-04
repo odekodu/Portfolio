@@ -19,17 +19,6 @@
             grid-template-columns: max-content max-content;
             align-items: center;
             gap: 0.5vw;
-
-            &-toggle {
-                font-size: 2em;
-                cursor: pointer;
-                justify-self: flex-end;
-                padding: 0.5em;
-
-                &:hover {
-                    color: var(--extra-color);
-                }
-            }
         }
 
         &-nav{
@@ -37,16 +26,6 @@
             display: grid;
             grid-template-columns:  max-content max-content;
             gap: 1em;
-
-            &-icon{
-                font-size: 3em;
-                cursor: pointer;
-                justify-self: flex-end;
-
-                &:hover {
-                    color: var(--extra-color);
-                }
-            }
         }
     }
 
@@ -62,17 +41,6 @@
         right: 0;
         left: 0;
         z-index: 100;
-
-        &-toggle {
-            font-size: 2em;
-            cursor: pointer;
-            justify-self: flex-end;
-            padding: 0.5em;
-
-            &:hover {
-                color: var(--extra-color);
-            }
-        }
 
         &-list {
             height: 80%;
@@ -109,12 +77,12 @@
         left: 0;
         top: 0;
         z-index: 1;
+        background-color: var(--minor-color);
+        color: var(--major-color);
 
         &-button {
             padding: 0.5em;
             font-size: 1.2em;
-            background-color: var(--minor-color);
-            color: var(--major-color);
             display: flex;
             align-items: center;
             cursor: pointer;
@@ -123,7 +91,6 @@
 
         &-button:hover {
             background-color: var(--extra-color);
-            color: var(--minor-color);
         }
     }
 
@@ -178,3 +145,4 @@
         }
     }
 }
+

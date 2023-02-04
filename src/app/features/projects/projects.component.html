@@ -1,4 +1,6 @@
 <div class="projects">
+    <h3 class="projects-header-title">Personal Projects</h3>
+
     <div class="projects-header">
         <div class="projects-header-tools">
             <button class="projects-header-tools-item" *ngFor="let tool of tools" (click)="toggleTool(tool)"
@@ -6,12 +8,9 @@
         </div>
     </div>
 
-    <h3 class="projects-header-title">Featured Projects</h3>
-
     <div class="projects-list">
         <span class="projects-list-item" *ngFor="let project of projects" [style.display]="showProject(project)">
             <h5 class="projects-list-item-name">{{project.name}}</h5>
-            <img *ngIf="project.image" [src]="project.image" alt="" class="projects-list-item-image">
             <span class="projects-list-item-details">
                 <span class="projects-list-item-details-description">
                     {{project.description}}
@@ -22,10 +21,7 @@
                     </span>
                 </span>
                 <span class="projects-list-item-details-links">
-                    <a *ngIf="project.app" [href]="project.app" class="projects-list-item-details-links-item">Open App</a>
-                    <a *ngIf="project.git.app" [href]="project.git.app" class="projects-list-item-details-links-item">Git(App)</a>
-                    <a *ngIf="project.git.api" [href]="project.git.api" class="projects-list-item-details-links-item">Git(Api)</a>
-                    <a *ngIf="project.git.code" [href]="project.git.code" class="projects-list-item-details-links-item">Git(Code)</a>
+                    <a [href]="project.git" class="projects-list-item-details-links-item" target="_blank">Open</a>
                 </span>
             </span>
         </span>

@@ -6,7 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AboutComponent } from './features/about/about.component';
 import { ProjectsComponent } from './features/projects/projects.component';
-import { SkillsComponent } from './features/skills/skills.component';
+import { ExperienceComponent } from './features/experience/experience.component';
 import { ContactComponent } from './features/contact/contact.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -15,7 +15,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     AboutComponent,
     ProjectsComponent,
-    SkillsComponent,
+    ExperienceComponent,
     ContactComponent,
   ],
   imports: [

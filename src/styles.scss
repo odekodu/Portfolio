@@ -1,17 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-    --text-font: "Oswald", monospace;
-    --title-font: "Cormorant Unicase", serif;
+    --text-font: 'Lato', sans-serif;
+    --title-font: 'Lora', serif;
 
-    --major-color: rgb(235, 239, 255);
-    --minor-color: rgb(12, 12, 14);
-    --extra-color: rgb(124, 46, 46);
+    --major-color: rgb(230, 239, 236);
+    --minor-color: rgb(80, 85, 84);
+    --extra-color: rgb(40, 188, 141);
 }
 
 [data-theme="dark"] {
-    --major-color: rgb(12, 12, 14);
-    --minor-color: rgb(235, 239, 255);
-    --extra-color: rgb(184, 26, 26);
+    --major-color: rgb(80, 85, 84);
+    --minor-color: rgb(230, 239, 236);
+    --extra-color: rgb(40, 188, 141);
 }
 
 ::-webkit-scrollbar {
@@ -85,5 +85,18 @@ body {
     ::-webkit-scrollbar {
         width: 20px;
         height: 5px;
+    }
+}
+
+.material-symbols-outlined{
+    font-size: 2rem;
+    padding: .5rem;
+
+    &.clickable{
+        cursor: pointer;
+
+        &:hover {
+            color: var(--extra-color);
+        }
     }
 }

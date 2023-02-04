@@ -1,0 +1,57 @@
+[
+  {
+    "company": "Kudy Financials",
+    "location": "Remote",
+    "from": "2019/08/09",
+    "job": "Backend Engineer",
+    "details": [
+      "Kudy Kash: This is a loan-based system that enables Kudy clients to take loans from the system and pay them back when due.",
+      "Access Levels Integration: This is a service that enables role-based authentication into the already existing API.",
+      "Kudy Points: This is a system that rewards users based on a couple of events that can later be converted to cash."
+    ]
+  },
+  {
+    "company": "Kliiq",
+    "location": "Remote",
+    "from": "2020/12/19",
+    "to": "2022/11/20",
+    "job": "Backend Engineer",
+    "details": [
+      "Built Accademia Service which is a distributed micro-service on a VPC"
+    ]
+  },
+  {
+    "company": "IPI Solutions",
+    "location": "Lagos, Nigeria",
+    "from": "2019/08/09",
+    "to": "2021/11/12",
+    "job": "FullStack & Lead Developer",
+    "details": [
+      "Crater365: The creation of this Page Builder was my first accomplishment in IPI Solutions. It currently functions as a canvas for quite a lot of Crater365 Elements on Microsoft Sharepoint. This SAAS has been deployed to over 30 clients. Also created an API to match.",
+      "Tabulator: I recently created a database manager using MongoDB as the storage. This is needed for a long-term plan for Crater365 to be a standalone application not leveraging Microsoft any longer."
+    ]
+  },
+  {
+    "company": "Freelance",
+    "location": "Enugu, Nigeria",
+    "from": "2017/08/09",
+    "to": "2019/11/12",
+    "job": "FullStack",
+    "details": [
+      "Full stack taste: This was also my first taste of Full Stack Engineering. I got prepared for the real world here.",
+      "Office Applications: I created office management applications for local businesses in my state to manage their inventory, staff, etc."
+    ]
+  },
+  {
+    "company": "Galaxy Backbone PLC.",
+    "location": "Abuja, Nigeria",
+    "from": "2015/02/07",
+    "to": "2015/08/02",
+    "job": "Technical Support Staff",
+    "details": [
+      "Six months internship",
+      "Support for site installation.",
+      "Site monitoring and availability reporting"
+    ]
+  }
+]

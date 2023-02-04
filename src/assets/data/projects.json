@@ -1,0 +1,119 @@
+[
+    {
+        "name": "Tabulator API",
+        "type": "api",
+        "tools": [
+            "MongoDB", 
+            "NestJS", 
+            "NGRX", 
+            "NodeJS", 
+            "JavaScript",
+            "TypeScript",
+            "Docker"
+        ],
+        "git": "https://github.com/Kade-95/tabulator-api",
+        "description": "Tabulator is a trial MongoDB Emulator, designed specifically for non-devs to have a taste of what MongoDB is.",
+        "status": false
+    },
+    {
+        "name": "Whisper API",
+        "type": "api",
+        "tools": [
+            "MongoDB", 
+            "NestJS", 
+            "NGRX", 
+            "NodeJS", 
+            "JavaScript",
+            "TypeScript",
+            "Redis",
+            "Docker",
+            ""
+        ],
+        "git": "https://github.com/Kade-95/whisper_api",
+        "description": "Whisper API is a scheduling api used for creation and management of crons and events",
+        "status": true
+    },
+    {
+        "name": "Shop API",
+        "type": "api",
+        "tools": [
+            "MongoDB", 
+            "NestJS", 
+            "NGRX", 
+            "NodeJS", 
+            "JavaScript",
+            "TypeScript",
+            "Redis",
+            "Docker"
+        ],
+        "git": "https://github.com/Kade-95/shop_api",
+        "description": "Shop API is an E-commerce API used to manage the activities of an online store",
+        "status": true
+    },
+    {
+        "name": "Ecobnb API",
+        "type": "api",
+        "tools": [
+            "MongoDB", 
+            "NestJS", 
+            "NGRX", 
+            "NodeJS", 
+            "JavaScript",
+            "TypeScript",
+            "Redis",
+            "Docker"
+        ],
+        "git": "https://github.com/Kade-95/ecobnb_api",
+        "description": "This is an API that can be used to manage the activies of hotels and bed n breakfast businesses",
+        "status": true
+    },
+    {
+        "name": "LoneDB",
+        "type": "library",
+        "tools": [
+            "NodeJS", 
+            "TypeScript",
+            "JavaScript",
+            "LocalStorage"
+        ],
+        "git": "https://github.com/Kade-95/lonedb",
+        "description": "This is mini Database Management System",
+        "status": true
+    },
+    {
+        "name": "Vit",
+        "type": "library",
+        "tools": [
+            "NodeJS", 
+            "TypeScript",
+            "JavaScript",
+            "LoneDB"
+        ],
+        "git": "https://github.com/Kade-95/version_control",
+        "description": "This is mini version control library modelled with reference to Github, but works only on JSON data",
+        "status": true
+    },
+    {
+        "name": "Transverser",
+        "type": "library",
+        "tools": [
+            "NodeJS", 
+            "JavaScript"
+        ],
+        "git": "https://github.com/Ka-de/transverser.git",
+        "description": "This is mini Database Management System",
+        "status": true
+    },
+    {
+        "name": "Timetable-js",
+        "type": "library",
+        "tools": [
+            "NodeJS", 
+            "JavaScript",
+            "TypeScript"
+        ],
+        "git": "https://github.com/Ka-de/transverser.git",
+        "description": "This is mini Database Management System",
+        "status": true
+    }
+]
