@@ -64,6 +64,10 @@
             position: relative;
             display: grid;
             grid-template-rows: max-content 1fr;
+            
+            &.pending{
+                opacity: .5;
+            }
 
             &:hover {
                 border-color: var(--extra-color);

@@ -17,7 +17,7 @@ $stack: 5;
         margin: auto;
         flex-direction: column;
         gap: 3rem;
-        padding: 1em 2em;
+        padding: 1em 4em;
 
         &-salute{
             font-size: 2.5rem;
@@ -53,7 +53,8 @@ $stack: 5;
             text-align: center;
 
             &:hover{
-                color: var(--extra-color);
+                background-color: var(--extra-color);
+                color: var(--major-color);
             }
         }
     }

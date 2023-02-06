@@ -9,7 +9,7 @@
     </div>
 
     <div class="projects-list">
-        <span class="projects-list-item" *ngFor="let project of projects" [style.display]="showProject(project)">
+        <span class="projects-list-item" *ngFor="let project of projects" [style.display]="showProject(project)" [ngClass]="{'pending' : !project.status}">
             <h5 class="projects-list-item-name">{{project.name}}</h5>
             <span class="projects-list-item-details">
                 <span class="projects-list-item-details-description">
